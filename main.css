@@ -2,5 +2,14 @@
 
 body {
     background-color: bisque;
+}
+main {
+    padding: 80px;
+}
+
+p {
+    font-size: large;
     font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    text-align: middle;
 }
