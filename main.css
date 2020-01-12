@@ -1,16 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
 
 body {
-    background-color: bisque;
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    padding: 20px;
+    width: 100vw;
+    background-color: aquamarine;
+    margin: 0 ;
 }
 
-main {
-    padding: 80px;
+.nav-item {
+    background-color: yellow;
 }
-
-p {
-    font-size: x-large;
-    font-family: 'Permanent Marker', cursive;
-    text-align: center;
-    text-align: middle;
+.nav-link {
+    background-color: rgb(114, 114, 128);
+    padding: 20px;
+    text-decoration: none;
+    color: aqua;
+}
+.nav-link:hover {
+    background-color: yellow;
+    color: black;
 }
