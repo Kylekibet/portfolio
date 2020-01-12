@@ -1,29 +1,119 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gugi', cursive;
 }
-.nav{
-    text-decoration: none;
-    list-style-type: none;
+/* Navbar styleling */
+nav{
     display: flex;
-    padding: 20px;
-    width: 100vw;
-    background-color: aquamarine;
-    margin: 0 ;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(236, 60, 60);
 }
 
-.nav-item {
-    background-color: yellow;
+.brand {
+    color: rgb(247, 245, 245);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25px;
+    font-weight: 200px;
 }
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+    list-style-type: none;
+}
+
 .nav-link {
-    background-color: rgb(114, 114, 128);
-    padding: 20px;
     text-decoration: none;
-    color: aqua;
+    color: rgb(247, 245, 245);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 19px;
+    padding-bottom: 18px;
 }
 .nav-link:hover {
-    background-color: yellow;
-    color: black;
+    color: rgb(85, 85, 85);
+}
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu div{
+    width: 25px;
+    height: 3px;
+    background-color:  rgb(247, 245, 245);
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1200px){
+    .nav {
+        width: 50%;
+    }   
+}
+
+@media screen and (max-width: 800px){
+    body {
+        overflow: hidden;
+    }
+    .nav {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(236, 60, 60);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav li{
+        opacity: 0;
+    }
+    .menu {
+        display: block;
+    }
+    .brand {
+        font-size: 15px;
+    }
+    .nav-link {
+        font-size: 12px;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
