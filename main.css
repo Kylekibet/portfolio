@@ -6,6 +6,8 @@
 }
 /* Navbar styleling */
 nav{
+    position: fixed;
+    min-width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -54,13 +56,51 @@ nav{
     transition: all 0.5s ease;
 }
 
+/* nav ending */
+
+
+
+/* body begin  */
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(46, 44, 44);
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 150px;
+    color: rgb(247, 245, 245);;
+}
+
+img {
+    opacity: 0.6;
+}
+
+#skills, #portfolio, #contact {
+    display: none;
+}
+/* body end  */
+
+
 @media screen and (max-width: 1200px){
+    /* nav start  */
     .nav {
         width: 50%;
-    }   
+    }
+    /* nav end     */
 }
 
 @media screen and (max-width: 800px){
+    /* nav start  */
     body {
         overflow: hidden;
     }
@@ -89,6 +129,7 @@ nav{
     .nav-link {
         font-size: 12px;
     }
+    /* nav end  */
 }
 
 .nav-active {
